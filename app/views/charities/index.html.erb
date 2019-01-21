@@ -2,6 +2,6 @@
 
 <% @charities.each do |charity| %>
   <ul>
-  <li><%= charity.name %></li>
+  <li><%= link_to charity.name, charity %></li>
   </ul>
 <% end %>
