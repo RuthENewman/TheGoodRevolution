@@ -1,0 +1,5 @@
+<h1>Event: <%= @event.name %></h1>
+<img src="<% @event.img_url %>" />
+<h3>Fundraising for: <%= link_to @event.social_action.name, events_path(@event.social_action) %></h3>
+<h3>Date and time: <%= @event.when %></h3>
+<h3>Location: <%= @event.location %></h3>

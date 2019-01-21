@@ -1,0 +1,11 @@
+<h1>Charity: <%= @charity.name %></h1>
+<img src="<% @charity.img_url %>" />
+<h3><%= @charity.category %></h3>
+<p><%= @charity.bio %></p>
+
+<h4>Social Actions</h4>
+<ul>
+  <% @charity.social_actions.each do |action| %>
+    <li><%= link_to social_action.title, social_action_path(action) %>
+  <% end %>
+</ul>

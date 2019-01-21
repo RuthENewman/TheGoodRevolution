@@ -1,0 +1,11 @@
+<h1><%= @social_action.title %></h1>
+<img src="<% @social_action.img_url %>" />
+<h3>Charity: <%= link_to @social_action.charity.name, charity_path(@social_action.charity) %></h3>
+<h3>Description: <%= @social_action.summary %></h3>
+
+<h4>Events</h4>
+<ul>
+  <% @social_action.events.each do |event| %>
+    <li><%= link_to event.name, event_path(event) %>
+  <% end %>
+</ul>
