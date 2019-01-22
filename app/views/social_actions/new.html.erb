@@ -1,0 +1,18 @@
+<h1>Add a Social Action</h1>
+
+<%= form_for @social_action do |f| %>
+  <div class="field">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </div>
+  <br>
+  <div class="field">
+  <%= f.label :summary %>
+  <%= f.text_area :summary %>
+  </div>
+  <%= f.collection_select :charity_id, Charity.all, :id, :name %>
+  <br>
+  <div class="action">
+  <%= f.submit %>
+  </div>
+<% end %>
