@@ -1,11 +1,14 @@
 <h1>Charity: <%= @charity.name %></h1>
-<img src="<% @charity.img_url %>" />
-<h3><%= @charity.category %></h3>
-<p><%= @charity.bio %></p>
+<img src="<%= @charity.img_url %>" />
+<h3>Category: <%= @charity.category %></h3>
+<p><strong>About:</strong> <%= @charity.bio %></p>
 
-<h4>Social Actions</h4>
+<h2>Social Actions</h2>
 <ul>
   <% @charity.social_actions.each do |action| %>
-    <li><%= link_to social_action.title, social_action_path(action) %>
+    <li><%= link_to action.title, action %>
   <% end %>
 </ul>
+
+<p><%= link_to 'Back to All Charities', charities_path %></p>
+<p><%= link_to 'Delete this charity', @charity, method: :delete, data: { confirm: 'Are you sure?'}%></p>

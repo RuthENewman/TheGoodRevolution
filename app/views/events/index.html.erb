@@ -1,7 +1,10 @@
 <h1> Events </h1>
 
-<% @events.each do |action| %>
+<% @events.each do |event| %>
 <ul>
-  <li><% action.name %> </li>
+  <p><li><%= link_to event.name, event %> </li></p>
 </ul>
 <%end%>
+
+<p><%= link_to 'All Charities', charities_path %></p>
+<p><%= link_to 'All Social Actions', social_actions_path %></p>
