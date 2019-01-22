@@ -3,30 +3,29 @@
 <%= form_for @charity do |f| %>
   <div class="field">
     <p><%= f.label :name %></p>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :size => 100 %>
     </div>
     <br>
     <div class="field">
     <p><%= f.label :category %></p>
-    <%= f.text_field :category %>
+    <%= f.text_field :category, :size => 100 %>
     </div>
     <br>
     <div class="field">
     <p><%= f.label :bio, "Description" %></p>
-    <%= f.text_area :bio %>
+    <%= f.text_area :bio, size: "100x10" %>
     </div>
     <br>
     <div class="field">
     <p><%= f.label :img_url, "Add an image URL" %></p>
-    <%= f.text_field :img_url %>
+    <%= f.text_field :img_url, :size => 100 %>
     </div>
     <br>
     <div class="action">
-      <%= f.submit %>
+    <p><%= f.submit %></p>
     </div>
 <% end %>
 
-<br>
-<p><%= link_to 'Delete this Social Action', social_actions_path %></p>
+
 <br>
 <p><%= link_to 'Back to all charities', charities_path %></p>
