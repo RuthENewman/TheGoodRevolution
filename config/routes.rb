@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get '/', to: 'welcome#index', as: 'welcome'
+
+  root to: "payments#index"
+  resources :payments, only: [:index, :new, :create]
+
+  # get 'payments/index'
+  # get 'payments/new'
+  # get 'payments/create'
+  # get '/', to: 'welcome#index', as: 'welcome'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get '/charities', to: 'charities#index', as: 'charities'
   # get '/charities/new', to: 'charities#new', as: 'new_charity'
@@ -10,6 +17,9 @@ Rails.application.routes.draw do
   # delete '/charities/:id', to: 'charities#destroy', as: 'charity'
   resources :charities
   resources :social_actions
+  resources :events
+  resources :donors
+  resources :doantions
   # resources :events
   # root 'welcome#index'
   # get '/social_actions', to:'social_actions#index', as: 'social_actions'
@@ -20,10 +30,10 @@ Rails.application.routes.draw do
   # patch '/social_actions/:id', to: 'social_actions', as: 'social_action'
   # delete '/social_actions/:id', to: 'social_actions', as: 'social_action'
 
-  get '/events', to: 'events#index', as: 'events'
-  get '/events/:id', to: 'events#show', as: 'event'
+  # get '/events', to: 'events#index', as: 'events'
+  # get '/events/:id', to: 'events#show', as: 'event'
 
-  get '/donors/new', to: 'donors#new', as: 'new_donor'
+  # get '/donors/new', to: 'donors#new', as: 'new_donor'
 
 
 end
