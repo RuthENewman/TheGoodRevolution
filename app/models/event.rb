@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :social_action
-  has_many :donations
-  has_many :donors, through: :donations
-  
+  has_many :payments
+  has_many :donors, through: :payments
+
 end
