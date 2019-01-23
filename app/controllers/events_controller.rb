@@ -1,8 +1,11 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show]
+  before_action :set_event, only: [:show, :edit, :destroy]
 
   def index
     @events = Event.all
+  end
+
+  def show
   end
 
   def new
@@ -17,6 +20,26 @@ class EventsController < ApplicationController
     else
       render 'new'
     end
+
+    def edit
+    end
+
+    def update
+      @event.update(event_params)
+      if @event.valid?
+        redirect_to @event
+      else
+        redirect_to edit_event_path
+      end
+
+    end
+
+    def destroy
+
+      @event.destroy
+      redirect_to events_path
+    end
+
   end
 
   private
@@ -26,7 +49,7 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:name, :social_action_id, :when, :location)
+    params.require(:event).permit(:name, :social_action_id, :when, :location, :img_url)
   end
 
 end

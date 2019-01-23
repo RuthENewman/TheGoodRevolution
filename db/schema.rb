@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_21_121622) do
+ActiveRecord::Schema.define(version: 2019_01_22_221800) do
 
   create_table "charities", force: :cascade do |t|
     t.string "name"
@@ -45,6 +45,17 @@ ActiveRecord::Schema.define(version: 2019_01_21_121622) do
     t.datetime "when"
     t.string "location"
     t.string "img_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "last4"
+    t.decimal "amount", precision: 12, scale: 3
+    t.boolean "success"
+    t.string "authorization_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
