@@ -1,10 +1,15 @@
 <h1>All charities</h1>
 
 <% @charities.each do |charity| %>
+  <div class="box">
   <p><%= link_to charity.name, charity %></p>
   <img src="<%= charity.img_url %>" />
   <br>
+  </div>
 <% end %>
 
+<div class="after-box">
 <p><%= link_to 'Add a new charity', new_charity_path %></p>
 <p><%= link_to 'Back to home', welcome_path %></p>
+</div>
+<br>

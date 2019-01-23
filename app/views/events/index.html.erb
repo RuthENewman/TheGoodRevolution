@@ -1,11 +1,13 @@
 <h1> Events </h1>
 
 <% @events.each do |event| %>
-<ul>
+  <div class="box">
   <p><%= link_to event.name, event %> </p>
   <img src="<%= event.img_url %>" />
-</ul>
+</div>
 <%end%>
 
+<div class="after-box">
 <p><%= link_to 'All Charities', charities_path %></p>
 <p><%= link_to 'All Social Actions', social_actions_path %></p>
+</div>
