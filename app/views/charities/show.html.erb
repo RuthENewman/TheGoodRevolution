@@ -6,10 +6,10 @@
 <h2>Social Actions</h2>
 <ul>
   <% @charity.social_actions.each do |action| %>
-    <li><%= link_to action.title, action %>
+    <p><li><%= link_to action.title, action %></p>
   <% end %>
 </ul>
 
 <p><%= link_to 'Back to All Charities', charities_path %></p>
-<p><%= link_to 'Edit', edit_charity_path %>
+<p><%= link_to 'Edit this charity', edit_charity_path %>
 <p><%= link_to 'Delete this charity', @charity, method: :delete, data: { confirm: 'Are you sure?'}%></p>

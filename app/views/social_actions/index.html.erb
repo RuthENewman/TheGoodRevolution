@@ -1,9 +1,8 @@
 <h1> Social Actions </h1>
 
 <% @social_actions.each do |action| %>
-<ul>
-  <li><%= link_to action.title, social_action_path(action) %> </li>
-</ul>
+  <p><%= link_to action.title, social_action_path(action) %> </p>
+  <img src="<%= action.img_url %>" />
 <%end%>
 
 <p><%= link_to 'Add a Social Action', new_social_action_path %></p>

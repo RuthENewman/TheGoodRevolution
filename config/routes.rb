@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  root to: "payments#index"
+  # root to: "payments#index"
   resources :payments, only: [:index, :new, :create]
 
   # get 'payments/index'
   # get 'payments/new'
   # get 'payments/create'
-  # get '/', to: 'welcome#index', as: 'welcome'
+  get '/', to: 'welcome#index', as: 'welcome'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get '/charities', to: 'charities#index', as: 'charities'
   # get '/charities/new', to: 'charities#new', as: 'new_charity'
