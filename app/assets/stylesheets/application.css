@@ -26,15 +26,30 @@ img {
   width: 60%;
 }
 
+.btn {
+  width: 10em;
+  height: 3em;
+  font-size: 20px;
+}
+
+.header {
+  position: relative;
+  top: 15%;
+  align: center;
+}
+
+
 .box {
   /* display: flex;
   flex-wrap: wrap; */
+  /* position: relative;
+  top: 40%; */
   height: 80%;
   width: 80%;
   margin: 1.5em;
 }
 .after-box {
-  clear: left;
+
 }
 
 .field {

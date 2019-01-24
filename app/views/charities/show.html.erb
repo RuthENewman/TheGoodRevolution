@@ -1,4 +1,4 @@
-<h1>Charity: <%= @charity.name %></h1>
+<h1 class="header">Charity: <%= @charity.name %></h1>
 <img src="<%= @charity.img_url %>" />
 <h3>Category: <%= @charity.category %></h3>
 <p><strong>About:</strong> <%= @charity.bio %></p>
@@ -6,7 +6,7 @@
 <h2>Social Actions</h2>
 <ul>
   <% @charity.social_actions.each do |action| %>
-    <p><li><%= link_to action.title, action %></p>
+    <li><p><%= link_to action.title, action %></p></li>
   <% end %>
 </ul>
 

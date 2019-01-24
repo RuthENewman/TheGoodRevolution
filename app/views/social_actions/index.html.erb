@@ -1,4 +1,4 @@
-<h1> Social Actions </h1>
+<h1 class="header"> Social Actions </h1>
 <div id="container">
 <% @social_actions.each do |action| %>
   <div class="box">
@@ -8,7 +8,7 @@
 <%end%>
 </div>
 </div>
-<div class="after-box">
-<p><%= link_to 'Add a Social Action', new_social_action_path %></p>
-<p><%= link_to 'All Charities', charities_path %></p>
-</div>
+  <div class="after-box">
+    <p><%= link_to 'Add a Social Action', new_social_action_path %></p>
+    <p><%= link_to 'All Charities', charities_path %></p>
+  </div>

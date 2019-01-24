@@ -1,30 +1,42 @@
-<h1>Become a supporter</h1>
+<h1 class="header">Join The Good Revolution</h1>
 
-<% form_for @donor do |f| %>
-  <div class="field" %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  </div>
-  <br>
+<%= form_for @donor do |f| %>
   <div class="field">
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  </div>
-  <br>
-  <div class="field">
-  <%= f.label :address, "Your address" %>
-  <%= f.text_field :address %>
-  </div>
-  <br>
-  <div class="field">
-  <%= f.label :phonenumber, "Your phone number" %>
-  <%= f.number_field :phonenumber %>
-  </div>
-  <div class="action">
-  <%= f.submit, "Create your Good Revolution profile" %>
-  </div>
-  <% end %>
+ <%= f.label :name %>
+ <br>
+ <%= f.text_field :name %>
+ </div>
+ <br>
+ <div class="field">
+ <%= f.label :email %>
+ <br>
+ <%= f.text_field :email %>
+ </div>
+ <br>
+ <div class="field">
+ <%= f.label :password %>
+ <br>
+ <%= f.password_field :password %>
+ </div>
+ <br>
+ <div class="field">
+ <%= f.label :address, "Your address (optional)" %>
+ <br>
+ <%= f.text_area :address %>
+ </div>
+ <br>
+ <div class="field">
+ <%= f.label :phonenumber, "Your phone number (optional)" %>
+ <br>
+ <%= f.number_field :phonenumber %>
+ </div>
+ <br>
+ <div class="action">
+ <%= f.submit "Join", :class => "btn" %>
+ </div>
+<% end %>
 
+<br>
 <p><%= link_to 'Back to all events', events_path %></p>
 <p><%= link_to 'Back to all social actions', social_actions_path %></p>
 <p><%= link_to 'Back to all charities', charities_path %></p>

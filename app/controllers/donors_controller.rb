@@ -12,14 +12,15 @@ class DonorsController < ApplicationController
     @donor = Donor.new(donor_params)
     if @donor.valid?
       @donor.save
-      redirect_to @donor
+      session[:donor_id] = @donor.id
+      redirect_to charities_path
     else
-      render 'new'
+      redirect_to join_path
     end
   end
 
   def donor_params
-     params.require(:donor).permit(:name, :email, :address, :phonenumber)
+     params.require(:donor).permit(:name, :email, :address, :phonenumber, :password)
   end
 
 end

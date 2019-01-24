@@ -4,4 +4,8 @@ class WelcomeController < ApplicationController
     render 'index'
   end
 
+  def show
+    render 'about' 
+  end
+
 end

@@ -1,0 +1,17 @@
+<h1 class="header">Log in</h1>
+
+<%= form_tag sessions_path do %>
+<br>
+ <p><%= label_tag :email %></p>
+ <p><%= text_field_tag :email %></p>
+<br>
+ <p><%= label_tag :password %></p>
+ <%= password_field_tag :password %>
+<br>
+<br>
+ <%= submit_tag "Log in", :class => "btn" %>
+ <br>
+<% end %>
+
+<br>
+<p><%= link_to 'Home', welcome_path %></p>

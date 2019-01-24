@@ -2,17 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  background: rgba(243, 230, 15, 1.0);
+background: -webkit-radial-gradient(left, rgba(243, 230, 15, 1.0), rgba(240, 159, 40, 1.0));
+background: -moz-radial-gradient(left, rgba(243, 230, 15, 1.0), rgba(240, 159, 40, 1.0));
+background: radial-gradient(to right, rgba(243, 230, 15, 1.0), rgba(240, 159, 40, 1.0));
+}
+
 #welcome-header {
-
+  position: relative;
+  top: 20%;
+  left: 25%;
+  margin: 0 auto;
 }
 
-#welcome-summary {
-
-}
 
 #welcome-page-links {
-  display: flex;
-  flex-wrap: wrap;
+  position: relative;
+  top: 55%;
+  left: 12%;
 }
 
 #welcome-page-link-1 {
@@ -26,4 +34,10 @@
 
 #welcome-page-link-3 {
 
+}
+
+#logo {
+  position: relative;
+  left: 25%;
+  margin: 0 auto;
 }
