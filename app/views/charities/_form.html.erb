@@ -2,33 +2,36 @@
 <div class="card">
   <div class="card-body">
 <%= form_for @charity do |f| %>
+  <div id="new-charity-form">
   <div class="field">
     <p><%= f.label :name %></p>
-    <%= f.text_field :name, :size => 65 %>
+    <%= f.text_field :name, :size => 40 %>
     </div>
     <br>
     <div class="field">
     <p><%= f.label :category %></p>
-    <%= f.text_field :category, :size => 58 %>
+    <%= f.text_field :category, :size => 40 %>
     </div>
     <br>
     <div class="field">
     <p><%= f.label :bio, "Description" %></p>
-    <%= f.text_area :bio, size: "65x10" %>
+    <%= f.text_area :bio, size: "40x10" %>
     </div>
     <br>
     <div class="field">
     <p><%= f.label :img_url, "Add an image URL" %></p>
-    <%= f.text_field :img_url, :size => 65 %>
+    <%= f.text_field :img_url, :size => 40 %>
     </div>
     <br>
     <br>
     <div class="action">
     <p><%= f.submit "Submit", :class => "btn btn-default btn-lg" %></p>
-
+    </div>
     </div>
 <% end %>
 </div>
 </div>
 <br>
+<div class="footer-links" id="charity-form-footer-link">
 <p><%= link_to 'Back to all charities', charities_path %></p>
+</div>

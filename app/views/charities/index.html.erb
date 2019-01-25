@@ -1,15 +1,17 @@
 <h1 class="header">All charities</h1>
-
-<div class="index-class">
+<div class="index-view">
 <% @charities.each do |charity| %>
-  <div class="box">
-  <p><%= link_to charity.name, charity %></p>
-  <img src="<%= charity.img_url %>" />
+  <div class="box for-item">
+  <div class="h3"><%= link_to charity.name, charity %></h3>
+    <br>
+    <br>
+  <img src="<%= charity.img_url %>" class="img-in-box img-rounded" />
   <br>
+  </div>
   </div>
 <% end %>
 </div>
-<div class="after-box">
+<div class="charities-links">
 <p><%= link_to 'Add a new charity', new_charity_path %></p>
 <p><%= link_to 'Back to home', welcome_path %></p>
 </div>

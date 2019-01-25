@@ -1,8 +1,9 @@
+<div class="show-profile">
 <h1 class="header"><%= @social_action.title %></h1>
 <br>
 <img src="<%= @social_action.img_url %>" class="img-rounded" />
 <br>
-<h2 class="show-page-details">Charity: <%= link_to @social_action.charity.name, charity_path(@social_action.charity) %></h2>
+<h2 class="show-page-details" id="charity-name">Charity: <%= link_to @social_action.charity.name, charity_path(@social_action.charity) %></h2>
 <br>
 <div id="about-box">
 <p>Description: <%= @social_action.summary %></p>
@@ -16,8 +17,9 @@
 </ul>
 </div>
 <br>
+</div>
 <div class="footer-links">
 <p><%= link_to 'Delete this social action', @social_action, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 <p><%= link_to 'Edit this social action', edit_social_action_path %></p>
-<p><%= link_to 'Back to All Social Actions', social_actions_path %></p>
+<p><%= link_to 'Back to all social actions', social_actions_path %></p>
 </div>

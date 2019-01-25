@@ -1,14 +1,15 @@
 <h1 class="header"> Events </h1>
-
-<% @events.each do |event| %>
-  <div class="box">
-  <p><%= link_to event.name, event %> </p>
-  <img src="<%= event.img_url %>" class="img-rounded" />
+<div class="index-view">
+  <% @events.each do |event| %>
+    <div class="box">
+    <div class="h3"><%= link_to event.name, event %> </div>
+    <img src="<%= event.img_url %>" class="img-rounded img-in-box" />
+  </div>
+  <%end%>
 </div>
-<%end%>
-
-<div class="after-box">
-<p><%= link_to 'Add an event', new_event_path %></p>
-<p><%= link_to 'All Charities', charities_path %></p>
-<p><%= link_to 'All Social Actions', social_actions_path %></p>
+  <div class="footer-links events-links-footer">
+  <p><%= link_to 'Add an event', new_event_path %></p>
+  <p><%= link_to 'All Charities', charities_path %></p>
+  <p><%= link_to 'All Social Actions', social_actions_path %></p>
+  </div>
 </div>
