@@ -9,11 +9,14 @@ background: -moz-radial-gradient(left, rgba(243, 230, 15, 1.0), rgba(240, 159, 4
 background: radial-gradient(to right, rgba(243, 230, 15, 1.0), rgba(240, 159, 40, 1.0));
 }
 
+.header {
+    color: white;
+    text-align: center;
+}
+
 #welcome-header {
-  position: relative;
-  top: 20%;
-  left: 25%;
-  margin: 0 auto;
+  text-align: center;
+  color: white;
 }
 
 
@@ -21,6 +24,7 @@ background: radial-gradient(to right, rgba(243, 230, 15, 1.0), rgba(240, 159, 40
   position: relative;
   top: 55%;
   left: 12%;
+  color: white;
 }
 
 #welcome-page-link-1 {
@@ -37,7 +41,8 @@ background: radial-gradient(to right, rgba(243, 230, 15, 1.0), rgba(240, 159, 40
 }
 
 #logo {
-  position: relative;
-  left: 25%;
+  // position: relative;
+  // left: 25%;
+  display: inline-block;
   margin: 0 auto;
 }

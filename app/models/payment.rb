@@ -1,8 +1,8 @@
 require "active_merchant/billing/rails"
 class Payment < ApplicationRecord
-  has_many :donors
+  has_many :users
   belongs_to :event
-  
+
   attr_accessor :card_security_code
   attr_accessor :credit_card_number
   attr_accessor :expiration_month

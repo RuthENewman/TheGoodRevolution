@@ -1,11 +1,15 @@
 <h1 class="header"> Social Actions </h1>
-<div id="container">
+<div class="container-fluid">
+  <div class="row">
 <% @social_actions.each do |action| %>
-  <div class="box">
-  <p><%= link_to action.title, social_action_path(action) %> </p>
+  <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 thumb clearfix"> -->
+  <div class="d-flex justify-content-around">
+  <div class="h3"><%= link_to action.title, social_action_path(action) %> </div>
+  <br>
   <img src="<%= action.img_url %>" />
   </div>
 <%end%>
+</div>
 </div>
 </div>
   <div class="after-box">

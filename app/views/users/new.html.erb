@@ -1,0 +1,58 @@
+<br>
+<h1 class="header">Join The Good Revolution</h1>
+<br>
+<%= form_for @user, :url => "/join" do |f| %>
+  <% if @user.errors.any? %>
+  <h2>Form is invalid</h2>
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+ <%= f.label :name %>
+ <br>
+ <%= f.text_field :name, :size => 40 %>
+ </div>
+ <br>
+ <div class="field">
+ <%= f.label :email %>
+ <br>
+ <%= f.text_field :email, :size => 40 %>
+ </div>
+ <br>
+ <div class="field">
+ <%= f.label :password %>
+ <br>
+ <%= f.password_field :password, :size => "40" %>
+ </div>
+ <br>
+ <div class="field">
+  <%= f.label :password_confirmation %><br>
+  <%= f.password_field :password_confirmation, :size => "40" %>
+  </div>
+ <div class="field">
+   <br>
+ <%= f.label :address, "Your address (optional)" %>
+ <br>
+ <%= f.text_area :address, :size => "40x3" %>
+ </div>
+ <br>
+ <div class="field">
+ <%= f.label :phonenumber, "Your phone number (optional)" %>
+ <br>
+ <%= f.text_field :phonenumber, :size => 40 %>
+ </div>
+ <br>
+ <div class="action">
+ <%= f.submit "Join", :class => "btn btn-default btn-lg" %>
+ </div>
+<% end %>
+
+<br>
+<p><%= link_to 'Back to all events', events_path %></p>
+<p><%= link_to 'Back to all social actions', social_actions_path %></p>
+<p><%= link_to 'Back to all charities', charities_path %></p>

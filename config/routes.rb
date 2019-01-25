@@ -7,12 +7,12 @@ Rails.application.routes.draw do
   resources :charities
   resources :social_actions
   resources :events
-  resources :donors
 
-  #donor account management
-  get '/join', to: 'donors#new', as: 'join'
-  post '/join', to: 'donors#create'
-  # get '/donors/:id', to: 'donors#show', as: 'donor'
+  #user account management
+  get '/users/:id', to: 'users#show', as: 'user'
+  get '/join', to: 'users#new', as: 'join'
+  post '/join', to: 'users#create'
+  # resources :users
 
   #sessions management
   get '/sessions/new', to: 'sessions#new', as: 'login'
