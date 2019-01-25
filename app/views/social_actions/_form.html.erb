@@ -1,14 +1,16 @@
 <br>
+<div class="card">
+  <div class="card-body">
 <%= form_for @social_action do |f| %>
   <div class="field">
   <%= f.label :title %>
-  <%= f.text_field :title, :size => 100 %>
+  <%= f.text_field :title, :size => 65 %>
   </div>
   <br>
   <div class="field">
   <%= f.label :summary %>
   <br>
-  <%= f.text_area :summary, size: "100x10" %>
+  <%= f.text_area :summary, size: "65x10" %>
   </div>
   <br>
   <div class="field">
@@ -19,10 +21,12 @@
   <div class="field">
   <%= f.label :img_url, "Add an image URL" %>
   <br>
-  <%= f.text_field :img_url , :size => 100 %>
+  <%= f.text_field :img_url , :size => 65 %>
   </div>
   <br>
   <div class="action">
   <%= f.submit "Submit", :class => "btn btn-default btn-lg" %>
   </div>
 <% end %>
+</div>
+</div>

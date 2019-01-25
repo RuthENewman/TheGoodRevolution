@@ -1,15 +1,23 @@
 <h1 class="header"><%= @social_action.title %></h1>
-<img src="<%= @social_action.img_url %>" />
-<h2>Charity: <%= link_to @social_action.charity.name, charity_path(@social_action.charity) %></h2>
+<br>
+<img src="<%= @social_action.img_url %>" class="img-rounded" />
+<br>
+<h2 class="show-page-details">Charity: <%= link_to @social_action.charity.name, charity_path(@social_action.charity) %></h2>
+<br>
+<div id="about-box">
 <p>Description: <%= @social_action.summary %></p>
-
-<h2>Events</h2>
+</div>
+<div class="events-links">
+<h2 class="h2">Events</h2>
 <ul>
   <% @social_action.events.each do |event| %>
     <li><p><%= link_to event.name, event_path(event) %></p></li>
   <% end %>
 </ul>
-
+</div>
+<br>
+<div class="footer-links">
 <p><%= link_to 'Delete this social action', @social_action, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 <p><%= link_to 'Edit this social action', edit_social_action_path %></p>
 <p><%= link_to 'Back to All Social Actions', social_actions_path %></p>
+</div>

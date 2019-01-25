@@ -3,16 +3,16 @@
   <div class="row">
 <% @social_actions.each do |action| %>
   <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 thumb clearfix"> -->
-  <div class="d-flex justify-content-around">
+    <div class="box">
   <div class="h3"><%= link_to action.title, social_action_path(action) %> </div>
   <br>
-  <img src="<%= action.img_url %>" />
+  <img src="<%= action.img_url %>" class="img-rounded" />
   </div>
 <%end%>
 </div>
 </div>
 </div>
-  <div class="after-box">
+  <div class="footer-links">
     <p><%= link_to 'Add a Social Action', new_social_action_path %></p>
     <p><%= link_to 'All Charities', charities_path %></p>
   </div>

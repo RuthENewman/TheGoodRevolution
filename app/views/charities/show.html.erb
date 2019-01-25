@@ -1,15 +1,21 @@
 <h1 class="header">Charity: <%= @charity.name %></h1>
-<img src="<%= @charity.img_url %>" />
-<h3>Category: <%= @charity.category %></h3>
+<br>
+<img src="<%= @charity.img_url %>" class="img-rounded" />
+<h3 class="show-page-details">Category: <%= @charity.category %></h3>
+<div id="about-box">
 <p><strong>About:</strong> <%= @charity.bio %></p>
-
-<h2>Social Actions</h2>
+</div>
+<h2 class="show-page-details">Social Actions</h2>
 <ul>
   <% @charity.social_actions.each do |action| %>
     <li><p><%= link_to action.title, action %></p></li>
   <% end %>
 </ul>
 
+<br>
+<div class="footer-links">
 <p><%= link_to 'Back to All Charities', charities_path %></p>
-<p><%= link_to 'Edit this charity', edit_charity_path %>
+<p><%= link_to 'Edit this charity', edit_charity_path %><br>
 <p><%= link_to 'Delete this charity', @charity, method: :delete, data: { confirm: 'Are you sure?'}%></p>
+</div>
+<br>

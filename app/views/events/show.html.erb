@@ -1,12 +1,13 @@
 <h1 class="header">Event: <%= @event.name %></h1>
 <br>
-<img src="<%= @event.img_url %>" />
+<img src="<%= @event.img_url %>" class="img-rounded"/>
 <br>
 <br>
-<p>Fundraising for: <%= link_to @event.social_action.title, @event.social_action %></p>
-<p>Date and time: <%= @event.when %></p>
-<p>Location: <%= @event.location %></p>
+<p class="show-page-details">Fundraising for: <%= link_to @event.social_action.title, @event.social_action %></p>
+<p class="show-page-details">Date and time: <%= @event.when %></p>
+<p class="show-page-details">Location: <%= @event.location %></p>
 
-<p><%= link_to 'Donate to the social action supported by this event', new_payment_path %></p>
-
-<p><%= link_to 'Back to Social Action', social_action_path(@event.social_action) %></p>
+<div class="footer-links">
+<p class="white-links"><%= link_to 'Donate to the social action supported by this event', new_payment_path %></p>
+<p class="white-links"><%= link_to 'Back to Social Action', social_action_path(@event.social_action) %></p>
+</div>

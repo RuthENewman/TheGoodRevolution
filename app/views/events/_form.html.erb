@@ -1,15 +1,18 @@
+<br>
+<div class="card">
+    <div class="card-body">
 <%= form_for @event do |f| %>
     <br>
     <div class="field">
     <%= f.label :social_action %>
     <br>
-    <%= f.collection_select :social_action_id, SocialAction.all, :id, :title  %><br>
+    <%= f.collection_select :social_action_id, SocialAction.all, :id, :title %><br>
     </div>
     <br>
     <div class="field">
     <%= f.label :name %>
     <br>
-    <%= f.text_field :name, :size => 60 %>
+    <%= f.text_field :name, :size => 65 %>
     </div>
     <br>
     <div class="field">
@@ -21,17 +24,19 @@
     <div class="field">
     <%= f.label :location %>
     <br>
-    <%= f.text_field :location, :size => 100 %>
+    <%= f.text_field :location, :size => 65 %>
     </div>
     <br>
     <div class="field">
     <%= f.label :img_url, 'Add a link to an image of your event' %>
     <br>
-    <%= f.text_field :img_url, :size => 100 %>
+    <%= f.text_field :img_url, :size => 65 %>
     </div>
     <br>
     <div class="action">
-    <%= f.submit, :class => "btn" %>
+    <%= f.submit "Create Event", :class => "btn btn-default btn-lg" %>
     </div>
     <% end %>
+    </div>
+    </div>
     <br>

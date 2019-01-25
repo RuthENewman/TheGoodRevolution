@@ -1,9 +1,11 @@
-<h1 class="header">Donor profile page</h1>
+<h1 class="header">My profile page</h1>
 
-<p>Name: <%= @user.name %></p>
-<p>Email: <%= @user.email %></p>
-<p>Address: <%= @user.address %></p>
-<p>Phone number: <%= @user.phonenumber %></p>
+<p class="show-page-details">Name: <%= @user.name %></p>
+<p class="show-page-details">Email: <%= @user.email %></p>
+<p class="show-page-details">Address: <%= @user.address %></p>
+<p class="show-page-details">Phone number: <%= @user.phonenumber %></p>
 
 <br>
+<div class="footer-links">
 <% link_to 'Edit your profile details', edit_donor_path %>
+</div>

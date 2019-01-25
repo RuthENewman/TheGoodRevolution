@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show', as: 'user'
   get '/join', to: 'users#new', as: 'join'
   post '/join', to: 'users#create'
+  get '/users/:id/edit', to: 'users#edit', as: 'edit_user'
+  post '/users/:id', to: 'users#update'
   # resources :users
 
   #sessions management

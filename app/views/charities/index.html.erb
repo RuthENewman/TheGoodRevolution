@@ -1,5 +1,6 @@
 <h1 class="header">All charities</h1>
 
+<div class="index-class">
 <% @charities.each do |charity| %>
   <div class="box">
   <p><%= link_to charity.name, charity %></p>
@@ -7,7 +8,7 @@
   <br>
   </div>
 <% end %>
-
+</div>
 <div class="after-box">
 <p><%= link_to 'Add a new charity', new_charity_path %></p>
 <p><%= link_to 'Back to home', welcome_path %></p>

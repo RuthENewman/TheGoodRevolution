@@ -21,23 +21,43 @@ background: radial-gradient(to right, rgba(243, 230, 15, 1.0), rgba(240, 159, 40
 
 
 #welcome-page-links {
-  position: relative;
-  top: 55%;
-  left: 12%;
-  color: white;
+  // position: relative;
+  // top: 55%;
+  left: 20%;
+  background-color: white;
+  width: 60%;
+  padding: 2%;
+  // border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #welcome-page-link-1 {
-
+  text-align: center;
+  font-size: 12px;
 }
 
 #welcome-page-link-2 {
-
+  text-align: center;
 }
 
 
 #welcome-page-link-3 {
+  text-align: center;
+}
 
+#welcome-summary {
+  color: white;
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+}
+
+#about-header {
+  color: white;
+  text-align: center;
 }
 
 #logo {
@@ -45,4 +65,5 @@ background: radial-gradient(to right, rgba(243, 230, 15, 1.0), rgba(240, 159, 40
   // left: 25%;
   display: inline-block;
   margin: 0 auto;
+  // border-radius: 20%;
 }

@@ -3,7 +3,7 @@
 <% @events.each do |event| %>
   <div class="box">
   <p><%= link_to event.name, event %> </p>
-  <img src="<%= event.img_url %>" />
+  <img src="<%= event.img_url %>" class="img-rounded" />
 </div>
 <%end%>
 
