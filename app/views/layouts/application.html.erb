@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Thegoodrevolution</title>
+    <title>The Good Revolution</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -24,7 +24,7 @@
 </head>
 <body>
      <div class="navbar">
-       <ul class="nav navbar-nav">
+       <ul class="nav navbar-nav navbar-fixed-top">
          <li><a href="/">The Good Revolution</a></li>
          <li><a href="/about">About</a></li>
           <li><a href="/join">Join</a></li>
@@ -41,6 +41,7 @@
      </div>
    </div>
  </nav>
+
 <div class="container">
 
     <% flash.each do |name, msg| %>

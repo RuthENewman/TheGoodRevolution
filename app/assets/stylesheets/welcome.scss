@@ -7,6 +7,11 @@ body {
 background: -webkit-radial-gradient(left, rgba(243, 230, 15, 1.0), rgba(240, 159, 40, 1.0));
 background: -moz-radial-gradient(left, rgba(243, 230, 15, 1.0), rgba(240, 159, 40, 1.0));
 background: radial-gradient(to right, rgba(243, 230, 15, 1.0), rgba(240, 159, 40, 1.0));
+ // padding-top: 10px;
+}
+
+.nav {
+  background-color: white;
 }
 
 .header {

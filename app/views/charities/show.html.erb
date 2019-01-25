@@ -1,18 +1,21 @@
-<h1 class="header">Charity: <%= @charity.name %></h1>
+<div class="show-profile">
+<h1 class="header"><%= @charity.name %></h1>
 <br>
 <img src="<%= @charity.img_url %>" class="img-rounded" />
-<h3 class="show-page-details">Category: <%= @charity.category %></h3>
+<div class="night-theme-box-small"><h3 class="show-page-details" id="category-name">Category: <%= @charity.category %></h3></div>
 <div id="about-box">
 <p><strong>About:</strong> <%= @charity.bio %></p>
 </div>
-<h2 class="show-page-details">Social Actions</h2>
+<div class="events-links">
+<div class="h2">Social Actions</div>
 <ul>
   <% @charity.social_actions.each do |action| %>
     <li><p><%= link_to action.title, action %></p></li>
   <% end %>
 </ul>
-
+</div>
 <br>
+</div>
 <div class="footer-links">
 <p><%= link_to 'Back to All Charities', charities_path %></p>
 <p><%= link_to 'Edit this charity', edit_charity_path %><br>
