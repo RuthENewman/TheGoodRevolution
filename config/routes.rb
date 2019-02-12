@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'images/index'
+  get 'images/new'
+  get 'images/show'
+  post 'images' => 'images#create'
   resources :payments, only: [:index, :new, :create]
   get '/', to: 'welcome#index', as: 'welcome'
   get '/about', to: 'welcome#show', as: 'about'
